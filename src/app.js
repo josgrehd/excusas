@@ -8,26 +8,26 @@ let when = [
   "while I was praying"
 ];
 
-function who1(max = 3, min = 0) {
-  var randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
-  return parseInt(randomNumber);
+function who1(max = who.length) {
+  var randomNumber = Math.floor(Math.random() *max);
+  return randomNumber;
 }
 
-function what1(max = 3, min = 0) {
-  var randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
-  return parseInt(randomNumber);
+function what1(max = what.length) {
+  var randomNumber = Math.floor(Math.random() *max);
+  return randomNumber;
 }
 
-function when1(max = 4, min = 0) {
-  var randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
-  return parseInt(randomNumber);
+function when1(max = when.length) {
+  var randomNumber = Math.floor(Math.random() *max);
+  return randomNumber;
 }
 
 function onLoad() {
-  var excusa1 = who[who1()];
-  var excusa2 = what[what1()];
-  var excusa3 = when[when1()];
-  var espacio = " ";
-  var cadena = excusa1 + espacio + excusa2 + espacio + excusa3;
+  let excusa1 = who[who1()];
+  let excusa2 = what[what1()];
+  let excusa3 = when[when1()];
+  let espacio = " ";
+  let cadena = excusa1 + espacio + excusa2 + espacio + excusa3;
   return cadena;
 }
